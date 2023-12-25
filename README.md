@@ -1,0 +1,1 @@
+# This Contains amy knowledge about Python till now
