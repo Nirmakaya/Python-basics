@@ -1,1 +1,1 @@
-# This Contains amy knowledge about Python till now
+# This Contains all my knowledge about Python, I'm still leaning more.
