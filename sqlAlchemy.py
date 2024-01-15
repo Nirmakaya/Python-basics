@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 # DB engine connection
 # create_engine(SQL server name:// Username:password@ url : port/ DB name)
-# echo = True will gives very long verbos
+# echo = True, will gives very long verbos
 
 engine = create_engine("postgresql://postgres:root@localhost:5432/alchemy", echo=False)
 
@@ -66,7 +66,7 @@ for student in students:
     print(student.name)
 
 
-# Get data by filtering : fileter() First()
+# Get data by filtering : filter() First()
 students = session.query(Student).filter(Student.name=="Lily").first()
 print(students.name, students.age)
 
@@ -82,12 +82,12 @@ student_count = session.query(Student).count()
 print(student_count)
 
 
-#Update : commit()
+#Update and commit()
 student = session.query(Student).filter(Student.age=='12').first()
 student.age="22"
 session.commit()
 
-# Delete : delete()
+# Delete : delete() and commit
 student = session.query(Student).filter(Student.name=="Lemon").first()
 session.delete(student)
 session.commit()
