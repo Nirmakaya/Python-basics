@@ -35,7 +35,7 @@ Train = pd.read_csv('Ticket.csv')       ## To make jupyter read a excel placed i
 
 ## Write Train or df to see the Tables in jupyter
 
-Train['Name'][0] # To access a particular cell, name=column, and row=0 index
+Train['Name'][0] # To access a particular cell, column=name, and row=0 index
 
 Train.index = ['first', 'second', 'third'] # To change index type of row
 

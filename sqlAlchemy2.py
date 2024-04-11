@@ -26,8 +26,8 @@ class Person(Base):
     # Repro Function : Specifies how we want to print the output when a object of Person is called
     # Like when you print the rows/output of a table
     def __repr__(self):
-        # f string
-        return f"({self.ssn}) {self.firstname} {self.lastname} {self.gender}, {self.age})"
+        # f string : to make a parameterised string
+        return f"({self.ssn}) {self.firstname} {self.lastname} {self.gender}, {self.age}"
 
 
 class City(Base):

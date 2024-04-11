@@ -2,12 +2,12 @@ from sqlalchemy import create_engine, Integer, Column, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-# ORM : Object Relational Mapping, object oriented way of dealing with DB.
+# ORM : Object Relational Mapping, object-oriented way of dealing with DB.
 # Here, Tables are classes and Fields are Table's Attributes.
 
 # DB engine connection
 # create_engine(SQL server name:// Username:password@ url : port/ DB name)
-# echo = True, will gives very long verbos
+# echo = True, will gives very long verbose
 
 engine = create_engine("postgresql://postgres:root@localhost:5432/alchemy", echo=False)
 
@@ -46,7 +46,7 @@ student3 = Student(name='Gade', age=12, grade='Second')
 #Add Entries to table
 # For single entries : add()
 # For multiple : add_all()
-# Use tuple for multiple entries
+# Use list for multiple entries
 session.add_all([student1, student3, student2])
 # Always Commit
 session.commit()
@@ -70,7 +70,7 @@ for student in students:
 students = session.query(Student).filter(Student.name=="Lily").first()
 print(students.name, students.age)
 
-# Get multiple data fo filtering, refer official documentation
+# Get multiple data to filtering, refer official documentation
 students = session.query(Student).filter(Student.name=="Lily",Student.name=="Sam").first()
 
 for student in students:

@@ -1,0 +1,38 @@
+1, 2, 3, 4, -10, 1.2e10
+
+"Hii", "hoo", "there", "yeet@!"
+
+["ki", 9, 0, "Yo"]
+[1,6,8,0,3,4,6]
+
+
+{
+  "name" : "Henry",
+  "isGood" : false,
+  "age" : 7,
+  "hobbies" : ["swimming", "table tennis"]
+  "friend" : [{
+  "name" : "Gamora",
+  "isGood" : true,
+  "age" : 28
+ }]
+}
+
+
+[
+  {
+  "name" : "Henry",
+  "isGood" : false,
+  "age" : 7
+  },
+ {
+  "name" : "Gamora",
+  "isGood" : true,
+  "age" : 28
+  },
+  {
+  "name" : "Jin",
+  "isGood": true,
+  "age": 29
+  }
+]
