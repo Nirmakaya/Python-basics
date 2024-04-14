@@ -56,7 +56,7 @@ async def get_drinks(request):
 
 ## ID on API endpoint
 async def get_drink(id):
-    # Use match_info.get() contains URL placeholder values of {id}
+    # Use match_info.get() contains URL placeholder values of {id}, and also the sam at start ({id}.match..)
     drink = session.query(Drink).filter_by(id=id.match_info.get('id')).first()
     drink_data = {'name': drink.name, 'description': drink.description}
 
@@ -90,13 +90,14 @@ async def delete_drink(id):
     session.delete(drink)
     session.commit()
     response_obj = { 'message' : 'yeet!@'}
-    return web.Response(text=json.dumps(response_obj))
+    return web.Response(text=json.dumps(response_obj), status=200)
 
 
 
 
-
+# Creating aiohttp web application
 app = web.Application()
+
 app.router.add_get('/drinks', get_drinks)
 app.router.add_get('/drinks/{id}', get_drink)
 app.router.add_post('/drinks', add_drinks)

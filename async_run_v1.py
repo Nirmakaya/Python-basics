@@ -19,7 +19,8 @@ import os
 
 
 # Calling API key from Alpha Vantage, example of client side API
-# OS is used to get the environment variable
+# OS is used to get the environment variable,
+# This API endpoint is public and it api key is given on website
 api_key = os.getenv('ALPHAVANTAGE_API_KEY')
 url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
 # the {} are to get the name in output
